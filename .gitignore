@@ -1,0 +1,4 @@
+.tmp
+libs/*
+!libs/icomoon/
+!libs/icomoon/fonts/

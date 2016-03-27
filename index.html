@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+	<meta charset="UTF-8">
+  <title>Angular Material App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link href="favicon.ico" rel="icon" type="image/x-icon" /> -->
+  <link rel="stylesheet prefetch" href="libs/angular-material/angular-material.min.css">
+  <link href="libs/icomoon/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div ng-app="app" ng-controller="MainCtrl as vm" layout="row" layout-fill ng-cloak md-theme="{{vm.theme}}" md-theme-watch="true">
+
+  <!-- ====================== Sidebar menu ====================== -->
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+    <span class="icon-satellite" id="logo"></span>
+      <div class="md-toolbar-tools md-clickable"  layout layout-padding>
+        <div layout="column" layout-padding>
+          <span id="app-title" class="md-title">Angular Material App</span>
+          <span id="app-title" class="md-body-1">SINGLE PAGE APPLICATION</span>
+        </div>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="User Settings" ng-click="vm.toast('3 points')">
+          <span class="icon-more_vert"></span>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <!-- ====================== Sidebar buttons ====================== -->
+    <md-content role="navigation">
+      <md-list>
+        <md-list-item></md-list-item>
+        <md-list-item ng-click="$state.go('home')">
+          <span class="icon-dashboard"></span>
+          <p class="md-body-2">Dashboard</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+
+        <md-list-item ng-click="$state.go('about')">
+          <span class="icon-list"></span>
+          <p class="md-body-2">About</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+
+        <md-list-item ng-click="$state.go('contact')">
+          <span class="icon-add_box"></span>
+          <p class="md-body-2">Contact</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+
+  <!-- ====================== Header is here ====================== -->
+  <section layout="column" role="main" flex>
+    <md-toolbar role="toolbar">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="vm.toggleSidenav('left')" hide-gt-md aria-label="Menu">
+          <span class="icon-menu"></span>
+        </md-button>
+        <h4 class="md-title">{{$state.current.title}}</h4>
+        <span flex></span>
+
+        <!-- ====================== Add button ====================== -->
+        <md-button class="md-icon-button" aria-label="Button Add" ng-click="vm.toast('Button add')">
+          <span class="icon-add"></span>
+        </md-button>
+
+        <!-- ====================== Color button ====================== -->
+        <md-menu md-position-mode="target-right target">
+          <md-button class="md-icon-button" aria-label="Change Theme" ng-click="$mdOpenMenu($event)">
+            <span class="icon-palette"></span>
+          </md-button>
+          <md-menu-content width="2">
+            <md-subheader>Change Theme</md-subheader>
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('red')">
+                <span class="icon-done"></span>
+                Red
+              </md-button>
+            </md-menu-item>
+
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('teal')">
+                <span class="icon-done"></span>
+                Teal
+              </md-button>
+            </md-menu-item>
+
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('brown')">
+                <span class="icon-done"></span>
+                Brown
+              </md-button>
+            </md-menu-item>
+
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('indigo')">
+                <span class="icon-done"></span>
+                Indigo
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+        <!-- ====================== Dropdown button ====================== -->
+        <md-menu md-position-mode="target-right target">
+          <md-button class="md-icon-button" aria-label="Dropdown Header" ng-click="$mdOpenMenu($event)">
+            <span class="icon-message"></span>
+          </md-button>
+          <md-menu-content width="4">
+            <md-subheader>Dropdown Header</md-subheader>
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.toast('Option 1')">
+                <span class="icon-done"></span>
+                Option 1
+              </md-button>
+            </md-menu-item>
+
+            <md-menu-item>
+              <md-button layout-fill md-ink-ripple ng-click="vm.toast('Option 2')">
+                <span class="icon-hourglass_empty"></span>
+                Option 2
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+
+      </div>
+    </md-toolbar>
+
+    <!-- ====================== Injected divs go here ====================== -->
+    <div ui-view></div>
+
+  </section>
+</div>
+
+  <script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="libs/angular-animate/angular-animate.min.js"></script>
+	<script src="libs/angular-aria/angular-aria.min.js"></script>
+	<script src="libs/angular-material/angular-material.min.js"></script>
+
+	<script src="js/app.js"></script>
+
+  <script src="js/controllers/MainCtrl.js"></script>
+
+</body>
+</html>

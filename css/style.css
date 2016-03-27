@@ -1,0 +1,21 @@
+body {
+  overflow: hidden;
+  background-color: #EEEEEE;
+}
+
+md-whiteframe {
+  background: #fff;
+}
+
+#content {
+  padding: 24px;
+}
+
+#app-title {
+  padding: 0;
+}
+
+#logo {
+  font-size: 3em;
+  margin: auto;
+}

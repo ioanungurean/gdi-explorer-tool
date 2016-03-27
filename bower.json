@@ -1,0 +1,23 @@
+{
+  "name": "spa-angular-material",
+  "homepage": "https://github.com/ioanungurean/spa-angular-material",
+  "authors": [
+    "ioanungurean <inungurean@gmail.com>"
+  ],
+  "description": "Single Page Application - Angular Material",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.2",
+    "angular-material": "^1.0.6",
+    "angular-ui-router": "^0.2.18"
+  }
+}
