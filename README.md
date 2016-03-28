@@ -13,3 +13,27 @@ Pe baza datelor publice vizand Free Code Camp, sa se dezvolte o aplicatie Web si
 * Ioan Ungurean
 * Adrian-Mihai Bodnar
 * Mihaela Radu
+
+#### Usage
+Clone repository:
+```
+$ git clone https://github.com/ioanungurean/codr.git
+```
+
+Install `bower`:
+```
+$ npm install -g bower 
+```
+
+Run `npm` and `bower`:
+```
+$ npm install & bower install
+```
+
+Start the server:
+```
+$ npm start
+```
+
+You are done! To view the app please visit: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;[http://localhost:8080](http://localhost:8080)
