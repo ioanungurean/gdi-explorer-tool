@@ -1,0 +1,30 @@
+{
+  "name": "codr",
+  "version": "0.0.1",
+  "description": "Free Code Camp Data Visualizer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioanungurean/codr.git"
+  },
+  "keywords": [
+    "project",
+    "infoiasi",
+    "web"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ioanungurean/codr/issues"
+  },
+  "homepage": "https://github.com/ioanungurean/codr#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.10"
+  }
+}
