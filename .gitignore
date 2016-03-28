@@ -10,6 +10,8 @@ pids
 
 .npm
 
+.vscode
+
 .node_repl_history
 
 node_modules
