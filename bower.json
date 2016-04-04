@@ -1,10 +1,10 @@
 {
-  "name": "spa-angular-material",
-  "homepage": "https://github.com/ioanungurean/spa-angular-material",
+  "name": "codr",
+  "homepage": "https://github.com/ioanungurean/codr",
   "authors": [
     "ioanungurean <inungurean@gmail.com>"
   ],
-  "description": "Single Page Application - Angular Material",
+  "description": "Code Camp Data Visualizer",
   "main": "",
   "moduleType": [],
   "license": "MIT",
