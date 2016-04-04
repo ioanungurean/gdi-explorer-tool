@@ -17,7 +17,7 @@
 <div ng-app="app" ng-controller="MainCtrl as vm" layout="row" layout-fill ng-cloak md-theme="{{vm.theme}}" md-theme-watch="true">
 
   <!-- ====================== Sidebar menu ====================== -->
-  <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
     <md-toolbar class="md-tall md-hue-2" layout-align="end end">
     <span class="icon-satellite" id="logo"></span>
       <div class="md-toolbar-tools md-clickable"  layout layout-padding>
@@ -26,7 +26,7 @@
           <span id="app-title" class="md-body-1">SINGLE PAGE APPLICATION</span>
         </div>
         <span flex></span>
-        <md-button class="md-icon-button" aria-label="User Settings" ng-click="vm.toast('3 points')">
+        <md-button class="md-icon-button" aria-label="User Settings" ng-click="vm.toast('3 points'); vm.toggleSidenav('left');">
           <span class="icon-more_vert"></span>
         </md-button>
       </div>
@@ -34,23 +34,22 @@
 
     <!-- ====================== Sidebar buttons ====================== -->
     <md-content role="navigation">
-      <md-list>
-        <md-list-item></md-list-item>
-        <md-list-item ng-click="$state.go('home')">
+      <md-list id="sidebar-list">
+        <md-list-item ng-click="$state.go('home'); vm.toggleSidenav('left');">
           <span class="icon-dashboard"></span>
           <p class="md-body-2">Dashboard</p>
           <span flex></span>
           <span class="icon-keyboard_arrow_right"></span>
         </md-list-item>
 
-        <md-list-item ng-click="$state.go('about')">
+        <md-list-item ng-click="$state.go('about'); vm.toggleSidenav('left');">
           <span class="icon-list"></span>
           <p class="md-body-2">About</p>
           <span flex></span>
           <span class="icon-keyboard_arrow_right"></span>
         </md-list-item>
 
-        <md-list-item ng-click="$state.go('contact')">
+        <md-list-item ng-click="$state.go('contact'); vm.toggleSidenav('left');">
           <span class="icon-add_box"></span>
           <p class="md-body-2">Contact</p>
           <span flex></span>
@@ -58,6 +57,7 @@
         </md-list-item>
       </md-list>
     </md-content>
+    <md-divider></md-divider>
   </md-sidenav>
 
   <!-- ====================== Header is here ====================== -->

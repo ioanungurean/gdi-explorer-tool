@@ -10,15 +10,15 @@ function MainCtrl($mdSidenav, $mdToast) {
 		$mdSidenav(menu).toggle();
 	};
 
-	vm.toast = function(message) {
-		var toast = $mdToast.simple().content('You clicked ' + message).position('bottom right');
-		$mdToast.show(toast);
-	};
-
-	vm.toggle = function(item, list) {
+  vm.toggle = function(item, list) {
 		var idx = list.indexOf(item);
 		if (idx > -1) list.splice(idx, 1);
 		else list.push(item);
+	};
+
+	vm.toast = function(message) {
+		var toast = $mdToast.simple().content('You clicked ' + message).position('bottom right');
+		$mdToast.show(toast);
 	};
 
 	vm.changeTheme = function(theme) {

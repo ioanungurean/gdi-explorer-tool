@@ -11,6 +11,10 @@ md-whiteframe {
   padding: 24px;
 }
 
+#sidebar-list {
+  margin-top: 5%;
+}
+
 #app-title {
   padding: 0;
 }
