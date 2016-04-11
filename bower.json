@@ -1,10 +1,10 @@
 {
-  "name": "codr",
-  "homepage": "https://github.com/ioanungurean/codr",
+  "name": "gexp",
+  "homepage": "https://github.com/ioanungurean/gexp",
   "authors": [
     "ioanungurean <inungurean@gmail.com>"
   ],
-  "description": "Code Camp Data Visualizer",
+  "description": "GDI Explorer Tool",
   "main": "",
   "moduleType": [],
   "license": "MIT",
