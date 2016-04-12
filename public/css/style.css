@@ -23,3 +23,8 @@ md-whiteframe {
   font-size: 3em;
   margin: auto;
 }
+
+[class^="icon-"], [class*=" icon-"] {
+    font-size: 24px;
+    margin: 3%;
+}

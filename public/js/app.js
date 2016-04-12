@@ -4,20 +4,32 @@ angular.module('app', ['ui.router', 'ngMaterial'])
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '../views/dashboard.html',
-      title: "Dashboard"
+      templateUrl: '../views/home.html',
+      title: "Home"
     })
 
-    .state('about', {
+    .state('data', {
+      url: '/data',
+      templateUrl: '../views/data.html',
+      title: "Data"
+    })
+
+    .state('charts', {
+      url: '/charts',
+      templateUrl: '../views/charts.html',
+      title: "Charts"
+    })
+
+     .state('about', {
       url: '/about',
       templateUrl: '../views/about.html',
       title: "About"
     })
 
-    .state('contact', {
-      url: '/contact',
-      templateUrl: '../views/contact.html',
-      title: "Contact"
+     .state('update_data', {
+      url: '/update_data',
+      templateUrl: '../views/update_data.html',
+      title: "Update Data"
     });
 
     $urlRouterProvider.otherwise('/');

@@ -19,11 +19,11 @@
   <!-- ====================== Sidebar menu ====================== -->
   <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
     <md-toolbar class="md-tall md-hue-2" layout-align="end end">
-    <span class="icon-satellite" id="logo"></span>
+    <span class="icon-multiline_chart" id="logo"></span>
       <div class="md-toolbar-tools md-clickable"  layout layout-padding>
         <div layout="column" layout-padding>
-          <span id="app-title" class="md-title">Angular Material App</span>
-          <span id="app-title" class="md-body-1">SINGLE PAGE APPLICATION</span>
+          <span id="app-title" class="md-title">GDI Explorer Tool</span>
+          <span id="app-title" class="md-body-1">Interactive Data Visualization</span>
         </div>
         <span flex></span>
         <md-button class="md-icon-button" aria-label="User Settings" ng-click="vm.toast('3 points'); vm.toggleSidenav('left');">
@@ -36,28 +36,45 @@
     <md-content role="navigation">
       <md-list id="sidebar-list">
         <md-list-item ng-click="$state.go('home'); vm.toggleSidenav('left');">
-          <span class="icon-dashboard"></span>
-          <p class="md-body-2">Dashboard</p>
+          <span class="icon-home"></span>
+          <p class="md-body-2">HOME</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+
+        <md-list-item ng-click="$state.go('data'); vm.toggleSidenav('left');">
+          <span class="icon-storage"></span>
+          <p class="md-body-2">DATA</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+
+        <md-list-item ng-click="$state.go('charts'); vm.toggleSidenav('left');">
+          <span class="icon-bubble_chart"></span>
+          <p class="md-body-2">CHARTS</p>
           <span flex></span>
           <span class="icon-keyboard_arrow_right"></span>
         </md-list-item>
 
         <md-list-item ng-click="$state.go('about'); vm.toggleSidenav('left');">
-          <span class="icon-list"></span>
-          <p class="md-body-2">About</p>
-          <span flex></span>
-          <span class="icon-keyboard_arrow_right"></span>
-        </md-list-item>
-
-        <md-list-item ng-click="$state.go('contact'); vm.toggleSidenav('left');">
-          <span class="icon-add_box"></span>
-          <p class="md-body-2">Contact</p>
+          <span class="icon-info_outline"></span>
+          <p class="md-body-2">ABOUT</p>
           <span flex></span>
           <span class="icon-keyboard_arrow_right"></span>
         </md-list-item>
       </md-list>
     </md-content>
+
     <md-divider></md-divider>
+
+    <md-list>
+      <md-list-item ng-click="$state.go('update_data'); vm.toggleSidenav('left');">
+          <span class="icon-sync"></span>
+          <p class="md-body-2">UPDATE DATA</p>
+          <span flex></span>
+          <span class="icon-keyboard_arrow_right"></span>
+        </md-list-item>
+    </md-list>
   </md-sidenav>
 
   <!-- ====================== Header is here ====================== -->
@@ -84,28 +101,28 @@
             <md-subheader>Change Theme</md-subheader>
             <md-menu-item>
               <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('red')">
-                <span class="icon-done"></span>
+                <span class="icon-colorize"></span>
                 Red
               </md-button>
             </md-menu-item>
 
             <md-menu-item>
               <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('teal')">
-                <span class="icon-done"></span>
+                <span class="icon-colorize"></span>
                 Teal
               </md-button>
             </md-menu-item>
 
             <md-menu-item>
               <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('brown')">
-                <span class="icon-done"></span>
+                <span class="icon-colorize"></span>
                 Brown
               </md-button>
             </md-menu-item>
 
             <md-menu-item>
               <md-button layout-fill md-ink-ripple ng-click="vm.changeTheme('indigo')">
-                <span class="icon-done"></span>
+                <span class="icon-colorize"></span>
                 Indigo
               </md-button>
             </md-menu-item>
@@ -121,7 +138,7 @@
             <md-subheader>Dropdown Header</md-subheader>
             <md-menu-item>
               <md-button layout-fill md-ink-ripple ng-click="vm.toast('Option 1')">
-                <span class="icon-done"></span>
+                <span class="icon-colorize"></span>
                 Option 1
               </md-button>
             </md-menu-item>
