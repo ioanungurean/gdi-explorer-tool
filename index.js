@@ -4,6 +4,7 @@ var app            = express();
 var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
+var open = require('open');
 
 // configuration
 
@@ -36,10 +37,10 @@ app.use(express.static(__dirname + '/public'));
 require('./app/routes')(app); // pass our application into our routes
 
 // start app
-app.listen(port);
-
-// shoutout to the user
-console.log('Listening to PORT ' + port);
+app.listen(port, function(){
+  console.log('Launching the browser!');
+  open('http://127.0.0.1:8080');
+});
 
 // expose app
 exports = module.exports = app;
