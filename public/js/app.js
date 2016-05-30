@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ngMaterial'])
+angular.module('app', ['ui.router', 'ngMaterial', 'md.data.table'])
 .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $locationProvider) {
   $stateProvider
@@ -11,6 +11,7 @@ angular.module('app', ['ui.router', 'ngMaterial'])
     .state('data', {
       url: '/data',
       templateUrl: '../views/data.html',
+      controller: 'CountryCtrl',
       title: "Data"
     })
 

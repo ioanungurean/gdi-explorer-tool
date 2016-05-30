@@ -27,6 +27,7 @@ function MainCtrl($mdSidenav, $mdToast) {
 			$mdToast.simple()
 			.content('Your theme is now ' + theme)
 			.position('bottom right')
+			.hideDelay(500)
 		);
 		localStorage.setItem('theme', theme);
 	}

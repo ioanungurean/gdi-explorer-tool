@@ -1,14 +1,19 @@
-body {
-  overflow: hidden;
+html, body {
   background-color: #EEEEEE;
+  overflow-y: scroll;
+ }
+
+ html {
+  overflow: hidden;
 }
 
-md-whiteframe {
-  background: #fff;
+.fixed {
+	position: fixed;
+  z-index: 3;
 }
 
-#content {
-  padding: 24px;
+.content {
+  padding: 8% 5% 3% 5%;
 }
 
 #sidebar-list {
