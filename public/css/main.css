@@ -33,3 +33,25 @@ html, body {
     font-size: 24px;
     margin: 3%;
 }
+
+table.md-table.md-row-select td.md-cell:nth-child(n+3):nth-last-child(n+2),
+table.md-table.md-row-select th.md-column:nth-child(n+3):nth-last-child(n+2) {
+  padding: 0;
+}
+
+td {
+  font-size: 0.7em !important;
+}
+
+table.md-table th.md-column md-icon:not(:last-child) {
+  margin-right: 2px;
+  margin-left: 5px;
+}
+
+md-card {
+  margin: 8px !important;
+}
+
+h3.md-title {
+  padding-left: 24px !important;
+}

@@ -1,13 +1,16 @@
 <section class="content" role="content" layout="column" layout-padding md-scroll-y>
 		<md-card>
+			<md-input-container style="margin: 30px 15px 0 15px;">
+				<label>Search</label>
+				<input type="text" ng-model="filter.search">
+			</md-input-container>
+		</md-card>
 
+		<md-card>
 			<md-toolbar class="md-table-toolbar md-default" ng-hide="options.rowSelection && selected.length">
 				<div class="md-toolbar-tools">
-					<span>Gender Development Index (GDI)</span>
+					<span>Gender Development Index (GDI) Table</span>
 					<div flex></div>
-					<md-button class="md-icon-button" ng-click="loadStuff()" aria-label="Refresh">
-						<span class="icon-sync"></span>
-					</md-button>
 				</div>
 			</md-toolbar>
 
@@ -18,40 +21,43 @@
 			</md-toolbar>
 
 			<md-table-container>
-				<table md-table md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" ng-model="selected" md-progress="promise">
+				<table md-table md-row-select="options.rowSelection" ng-model="selected">
 					<thead md-head md-order="query.order" md-on-reorder="logOrder">
 						<tr md-row>
-							<th md-column md-order-by="name"><span>Country</span></th>
-							<th md-column md-numeric md-order-by="fat.value"><span>HDI - Female</span></th>
-							<th md-column md-numeric md-order-by="carbs.value"><span>HDI- Male</span></th>
-							<th md-column md-numeric md-order-by="protein.value"><span>LE - Female</span></th>
-							<th md-column md-numeric md-order-by="sodium.value"><span>LE - Male</span></th>
-							<th md-column md-numeric md-order-by="calcium.value"><span>EYS - Female</span></th>
-							<th md-column md-numeric md-order-by="iron.value"><span>EYS - Male</span></th>
-							<th md-column md-numeric md-order-by="iron.value"><span>MYS - Female</span></th>
-							<th md-column md-numeric md-order-by="iron.value"><span>MYS - Male</span></th>
-							<th md-column md-numeric md-order-by="iron.value"><span>GNI - Female</span></th>
-							<th md-column md-numeric md-order-by="iron.value"><span>GNI - Male</span></th>
+							<th md-column md-order-by="name"><span>Country</br>(name)</span></th>
+							<th md-column md-numeric md-order-by="gdi_value"><span>GDI Value</br>(value)</span></th>
+							<th md-column md-numeric md-order-by="gdi_group"><span>GDI Group</br>(group)</span></th>
+							<th md-column md-numeric md-order-by="hdi_f"><span>HDI Female</br>(value)</span></th>
+							<th md-column md-numeric md-order-by="hdi_m"><span>HDI Male</br>(value)</span></th>
+							<th md-column md-numeric md-order-by="le_f"><span>LE Female</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="le_m"><span>LE Male</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="eys_f"><span>EYS Female</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="eys_m"><span>EYS Male</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="mys_f"><span>MYS Female</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="mys_m"><span>MYS Male</br>(years)</span></th>
+							<th md-column md-numeric md-order-by="gni_f"><span>GNI Female</br>(PPP $)</span></th>
+							<th md-column md-numeric md-order-by="gni_m"><span>GNI Male</br>(PPP $)</span></th>
 						</tr>
 					</thead>
 					<tbody md-body>
-							<tr md-row md-select="dessert" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="dessert in desserts.data | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
-							<td md-cell>{{dessert.name}}</td>
-							<td md-cell>{{dessert.calories.value}}</td>
-							<td md-cell>{{dessert.fat.value | number: 2}}</td>
-							<td md-cell>{{dessert.carbs.value}}</td>
-							<td md-cell>{{dessert.protein.value | number: 2}}</td>
-							<td md-cell>{{dessert.sodium.value}}</td>
-							<td md-cell>{{dessert.calcium.value}}%</td>
-							<td md-cell>{{dessert.iron.value}}%</td>
-							<td md-cell>{{dessert.iron.value}}%</td>
-							<td md-cell>{{dessert.iron.value}}%</td>
-							<td md-cell>{{dessert.iron.value}}%</td>
+							<tr md-row md-select="country" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="country in countries | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+							<td md-cell>{{country.name}}</td>
+							<td md-cell>{{country.gdi_value}}</td>
+							<td md-cell>{{country.gdi_group}}</td>
+							<td md-cell>{{country.hdi_f}}</td>
+							<td md-cell>{{country.hdi_m}}</td>
+							<td md-cell>{{country.le_f}}</td>
+							<td md-cell>{{country.le_m}}</td>
+							<td md-cell>{{country.eys_f}}</td>
+							<td md-cell>{{country.eys_m}}</td>
+							<td md-cell>{{country.mys_f}}</td>
+							<td md-cell>{{country.mys_m}}</td>
+							<td md-cell>{{country.gni_f | currency}}</td>
+							<td md-cell>{{country.gni_m | currency}}</td>
 						</tr>
 					</tbody>
 				</table>
 			</md-table-container>
-
-			<md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{desserts.count}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
+			<md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{countries.length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
 		</md-card>
 </section>
