@@ -9,6 +9,7 @@ module.exports = function (app) {
   // handle things like api calls
   // authentication routes
 
+
   // sample api route
   app.get('/api/countries', function (req, res) {
     // use mongoose to get all countries in the database
@@ -37,9 +38,9 @@ module.exports = function (app) {
     // });
     
 app.get('/api/countries/:id', function (req, res){
-  return Country.findById(req.params.id, function (err, product) {
+  return Country.findOne({'_id':req.params.id}, function (err, country) {
     if (!err) {
-      return res.send(product);
+      return res.send(country);
     } else {
       return console.log(err);
     }

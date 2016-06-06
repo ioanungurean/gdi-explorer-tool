@@ -1,0 +1,1 @@
+mongoimport --db gexpdb --collection countries --type json --file countries.json --jsonArray
