@@ -22,6 +22,32 @@ module.exports = function (app) {
       res.json(countries);
     });
   });
+  
+    // app.get('/api/countries/:id',function(req,res){
+    //     var response = {};
+    //     Country.findById(req.params.id, function(err,data){
+    //     // This will run Mongo Query to fetch data based on ID.
+    //         if(err) {
+    //             response = {"error" : true,"message" : "Error fetching data"};
+    //         } else {
+    //             response = {"error" : false,"message" : data};
+    //         }
+    //         res.json(response);
+    //     });
+    // });
+    
+app.get('/api/countries/:id', function (req, res){
+  return Country.findById(req.params.id, function (err, product) {
+    if (!err) {
+      return res.send(product);
+    } else {
+      return console.log(err);
+    }
+  });
+});
+
+  
+  
 
   // route to handle creating goes here (app.post)
   // route to handle delete goes here (app.delete)

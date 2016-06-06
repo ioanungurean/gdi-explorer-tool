@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 // define our country model
 // module.exports allows us to pass this to other files when it is called
 module.exports = mongoose.model('Country', {
+    _id: ObjectId,
     index: Number,
     name: String,
     gdi_value: Number,
