@@ -1,5 +1,22 @@
-<section class="content" role="content" layout="column" layout-padding md-scroll-y>
-	<md-content class="md-whiteframe-1dp" layout="column" flex>
-		CHARTS
+<section class="content" role="content" layout="row" layout-padding md-scroll-y>
+
+	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
+
+		<md-input-container class="md-block drop_down_countries" flex-gt-sm>
+			<label class="drop_down_countries">Select Country</label>
+			<md-select ng-model="user.country">
+				<md-option ng-repeat="country in countries" value="{{country.name}}">
+					{{country.name}}
+				</md-option>
+			</md-select>
+		</md-input-container>
+
+		<canvas id="radar" class="chart chart-radar"
+			chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-colours="colours">
+		</canvas>
+  </md-content>
+
+	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
+
   </md-content>
 </section>

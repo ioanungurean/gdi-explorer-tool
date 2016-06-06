@@ -55,3 +55,11 @@ md-card {
 h3.md-title {
   padding-left: 24px !important;
 }
+
+.cards_chart {
+  margin: 5px;
+}
+
+md-block {
+  margin-bottom: 100px !important;
+}

@@ -40,7 +40,8 @@
 						</tr>
 					</thead>
 					<tbody md-body>
-							<tr md-row md-select="country" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="country in countries | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+							<tr md-row md-select="country" md-on-select="logItem" md-auto-select="options.autoSelect"
+								ng-repeat="country in countries | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
 							<td md-cell>{{country.name}}</td>
 							<td md-cell>{{country.gdi_value}}</td>
 							<td md-cell>{{country.gdi_group}}</td>
@@ -58,6 +59,9 @@
 					</tbody>
 				</table>
 			</md-table-container>
-			<md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{countries.length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination"></md-table-pagination>
+			<md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page"
+				md-total="{{countries.length}}" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"
+				md-on-paginate="logPagination">
+			</md-table-pagination>
 		</md-card>
 </section>

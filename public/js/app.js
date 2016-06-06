@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ngMaterial', 'md.data.table'])
+angular.module('app', ['ui.router', 'ngMaterial', 'md.data.table', 'chart.js'])
 .config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider', '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $locationProvider) {
   $stateProvider
@@ -18,6 +18,7 @@ angular.module('app', ['ui.router', 'ngMaterial', 'md.data.table'])
     .state('charts', {
       url: '/charts',
       templateUrl: '../views/charts.html',
+      controller: 'ChartsCtrl',
       title: "Charts"
     })
 
