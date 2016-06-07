@@ -1,5 +1,82 @@
 <section class="content" role="content" layout="column" layout-padding md-scroll-y>
 	<md-content class="md-whiteframe-1dp" layout="column" flex>
-		ABOUT
+		
+		<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="description">
+        <md-content class="md-padding">
+          <h1 class="md-display-2"> Project Description</h1>
+          <p>&emsp;&emsp;Folosind datele publice vizand Gender Development Index (GDI),am implementat un instrument Web interactiv si API-ul REST aferent pentru explorarea, filtrarea, vizualizarea si, eventual, actualizarea informatiilor referitoare la egalitatea de gen la nivel global. API-ul REST foloseste formatul JSON si XML. Vizualizarea datelor se realizeaza intr-un mod edificator si atrctiv prin intermediul a 3 modalitati de vizualizare. Aceste vizualizari vor putea fi exportate in formatele PNG si SVG. Interfata Web va adopta principiile designului Web responsiv.</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="gdi">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Gender Development Index</h1>
+          <p>&emsp;&emsp;The new GDI measures gender gaps in human development achievements by accounting for disparities between women and men in three basic dimensions of human development - health, knowledge and living standards using the same component indicators as in the HDI. The GDI is the ratio of the HDIs calculated separately for females and males using the same methodology as in the HDI. It is a direct measure of gender gap showing the female HDI as a percentage of the male HDI.</p>
+					<p>&emsp;&emsp;The GDI is calculated for 161 countries. Countries are grouped into five groups based on the absolute deviation from gender parity in HDI values. This means that grouping takes equally into consideration gender gaps favoring males, as well as those favoring females.</p>
+					<p>&emsp;&emsp;The GDI shows how much women are lagging behind their male counterparts and how much women need to catch up within each dimension of human development. It is good for understanding the real gender gap in human development achievements and is useful to design policy tools to close the gap.</p>
+        </md-content>
+      </md-tab>
+			<md-tab label="notes">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Notes</h1>
+          <p>&emsp; Because disaggregated income data are not available, data are crudely estimated. See Definitions and Technical note 3 <a href="http://hdr.undp.org/sites/default/files/hdr2015_technical_notes.pdf">here</a> for details on how the Gender Development    Index is calculated.</p>
+					<p>&emsp; Countries are divided into five groups by absolute deviation from gender parity in HDI values.</p>
+					<p>&emsp; Data refer to 2014 or the most recent year available.</p>
+					<p>&emsp; Calculated by the Singapore Ministry of Education.</p>
+					<p>&emsp; HDRO updates based on data on educational attainment from UNESCO Institute for Statistics (2015) and methodology from Barro and Lee (2014).</p>
+					<p>&emsp; For the purpose of calculating the male HDI value, estimated gross national income per capita is capped at $75,000.</p>
+					<p>&emsp; Based on data from UNESCO Institute for Statistics (2011).</p>
+					<p>&emsp; Based on data on school life expectancy from the UNESCO Institute for Statistics (2013).</p>
+					<p>&emsp; HDRO calculations based on data from recent United Nations Children's Fund (UNICEF) Multiple Indicator Cluster Surveys.</p>
+					<p>&emsp; Based on the estimate of educational attainment distribution from UNESCO Institute for Statistics (2015).</p>
+					<p>&emsp; HDRO calculations based on data from the 2011 population census from Samoa Bureau of Statistics (2013).</p>
+					<p>&emsp; HDRO estimate based on data from the country's most recent ICF Macro Demographic and Health Survey.</p>
+        </md-content>
+      </md-tab>
+			<md-tab label="definitions">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Definitions</h1>
+          <p>&emsp; <b>Gender Development Index:</b> Ratio of female to male HDI values. See Technical note 3 <a href=" http://hdr.undp.org/sites/default/files/hdr2015_technical_notes.pdf">here</a> for details on how the Gender Development Index is calculated.</p>
+					<p>&emsp; <b>Gender Development Index groups:</b> Countries are divided into five groups by absolute deviation from gender parity in HDI values. Group 1 comprises countries with high equality in HDI achievements between women and men (absolute deviation of less than 2.5 percent); group 2 comprises countries with medium to high equality in HDI achievements between women and men (absolute deviation of 2.5-5 percent); group 3 comprises countries with medium equality in HDI achievements between women and men (absolute deviation of 5-7.5 percent); group 4 comprises countries with medium to low equality in HDI achievements between women and men (absolute deviation of 7.5-10 percent); and group 5 comprises countries with low equality in HDI achievements between women and men (absolute deviation from gender parity of more than 10 percent).</p>
+					<p>&emsp; <b>Human Development Index (HDI):</b> A composite index measuring average achievement in three basic dimensions of human development—a long and healthy life, knowledge and a decent standard of living. See Technical note 1 <a href="http://hdr.undp.org/sites/default/files/hdr2015_technical_notes.pdf">here</a> for details on how the HDI is calculated.</p>
+					<p>&emsp; <b>Life expectancy at birth:</b> Number of years a newborn infant could expect to live if prevailing patterns of age-specific mortality rates at the time of birth stay the same throughout the infant’s life.</p>
+					<p>&emsp; <b>Expected years of schooling:</b> Number of years of schooling that a child of school entrance age can expect to receive if prevailing patterns of age-specific enrolment rates persist throughout the child’s life.</p>
+					<p>&emsp; <b>Mean years of schooling:</b> Average number of years of education received by people ages 25 and older, converted from educational attainment levels using official durations of each level.</p>
+					<p>&emsp; <b>Estimated gross national income per capita:</b> Derived from the ratio of female to male wages, female and male shares of economically active population and GNI (in 2011 purchasing power parity terms). See Technical note 3 <a href="http://hdr.undp.org/sites/default/files/hdr2015_technical_notes.pdf">here</a> for details.</p>
+        </md-content>
+      </md-tab>
+			<md-tab label="data sources">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Main data sources</h1>
+          <p>&emsp; Columns 1: Calculated based on data in columns 3 and 4.</p>
+					<p>&emsp; Columns 2: Calculated based on data in column 1.</p>
+					<p>&emsp; Columns 3 and 4: HDRO calculations based on data from UNDESA (2015), UNESCO Institute for Statistics (2015), Barro and Lee (2014), World Bank (2015a), ILO (2015a) and IMF (2015).</p>
+					<p>&emsp; Columns 5 and 6: UNDESA (2015).</p>
+					<p>&emsp; Columns 7 and 8: UNESCO Institute for Statistics (2015).</p>
+					<p>&emsp; Columns 9 and 10: UNESCO Institute for Statistics (2015), Barro and Lee (2014), UNICEF Multiple Indicator Cluster Surveys and ICF Macro Demographic and Health Surveys.</p>
+					<p>&emsp; Columns 11 and 12: HDRO calculations based on ILO (2015a), UNDESA (2013a), World Bank (2015a) and IMF (2015).</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="team">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Team </h1>
+          <p>
+							<ul>
+								<li> <b> Bodnar Adrian </b> </li>
+								<br>
+								<li> <b> Radu Mihaela </b> </li>
+								<br>
+								<li> <b> Ungurean Ioan </b> </li>
+								<br>
+							</ul>
+					</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+
   </md-content>
 </section>
