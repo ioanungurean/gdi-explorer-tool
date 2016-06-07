@@ -13,7 +13,7 @@ html, body {
 }
 
 .content {
-  padding: 8% 5% 3% 5%;
+  padding: 6% 5% 3% 5%;
 }
 
 #sidebar-list {
@@ -49,7 +49,9 @@ table.md-table th.md-column md-icon:not(:last-child) {
 }
 
 md-card {
-  margin: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 2px !important;
 }
 
 h3.md-title {
@@ -57,7 +59,8 @@ h3.md-title {
 }
 
 .cards_chart {
-  margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 md-block {
@@ -66,10 +69,6 @@ md-block {
 
 .section {
   padding: 0 5% 3% 5%;
-}
-
-.home {
-  padding: 6% 5% 3% 5%;
 }
 
 .tabsdemoDynamicHeight md-content {
