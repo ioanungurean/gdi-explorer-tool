@@ -94,8 +94,8 @@ function ChartsCtrl($scope, countryService) {
     }
   };
 
-  $scope.exportImage = function() {
-    var canvas = document.getElementById("line");
+  $scope.exportImage = function(id) {
+    var canvas = document.getElementById(id);
     if (canvas.getContext) {
       var ctx = canvas.getContext("2d");
       var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");

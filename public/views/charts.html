@@ -10,7 +10,7 @@
 		<canvas id="radar" class="chart chart-radar"
 			chart-data="dataRadarChart" chart-labels="labelsRadarChart" chart-legend="true" chart-series="series" chart-colours="colours">
 		</canvas>
-		<md-button class="md-raised md-primary">Export Image</md-button>
+		<md-button class="md-raised md-primary" ng-click="exportImage('radar')">Export Image</md-button>
 	</md-content>
 
 	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
@@ -24,7 +24,7 @@
 		<canvas id="bar" class="chart chart-bar" chart-data="dataBarChart" chart-legend="true"
 			chart-labels="labelsBarChart" chart-series="series" chart-colours="colours">
 		</canvas>
-		<md-button class="md-raised md-primary">Export Image</md-button>
+		<md-button class="md-raised md-primary" ng-click="exportImage('bar')">Export Image</md-button>
   </md-content>
 </section>
 
@@ -40,6 +40,6 @@
 		<canvas height="95" id="line" class="chart chart-line" chart-data="dataLineChart" chart-legend="true"
 			chart-labels="labelsLineChart" chart-series="series" chart-colours="colours">
 		</canvas>
-		<md-button class="md-raised md-primary" ng-click="exportImage()">Export Image</md-button>
+		<md-button class="md-raised md-primary" ng-click="exportImage('line')">Export Image</md-button>
   </md-content>
 </section>
