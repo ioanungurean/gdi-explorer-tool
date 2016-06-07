@@ -1,16 +1,5 @@
 <section class="content" role="content" layout="row" layout-padding md-scroll-y>
-
 	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
-
-		<!--<md-input-container class="md-block drop_down_countries" flex-gt-sm>
-			<label class="drop_down_countries">Select Country</label>
-			<md-select ng-model="user.country">
-				<md-option ng-repeat="country in countries" value="{{country}}">
-					{{country.name}}
-				</md-option>
-			</md-select>
-		</md-input-container>-->
-
 		<md-input-container>
 			<label>Select Country</label>
 			<md-select ng-model="selectedCountry" md-selected-text="getSelectedCountry()">
@@ -19,11 +8,35 @@
 		</md-input-container>
 
 		<canvas id="radar" class="chart chart-radar"
-			chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-colours="colours">
+			chart-data="dataRadarChart" chart-labels="labelsRadarChart" chart-legend="true" chart-series="series" chart-colours="colours">
 		</canvas>
-  </md-content>
+	</md-content>
 
 	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
+		<md-input-container>
+			<label>Select Country</label>
+			<md-select ng-model="selectedBarCountry" md-selected-text="getSelectedBarCountry()">
+				<md-option ng-value="country" ng-repeat="country in countries">{{country.name}}</md-option>
+			</md-select>
+		</md-input-container>
 
+		<canvas id="bar" class="chart chart-bar" chart-data="dataBarChart" chart-legend="true"
+			chart-labels="labelsBarChart" chart-series="series" chart-colours="colours">
+		</canvas>
+  </md-content>
+</section>
+
+<section class="section" role="content" layout="column" layout-padding md-scroll-y>
+	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
+		<md-input-container>
+			<label>Select Country</label>
+			<md-select ng-model="selectedLineCountry" md-selected-text="getSelectedLineCountry()">
+				<md-option ng-value="country" ng-repeat="country in countries">{{country.name}}</md-option>
+			</md-select>
+		</md-input-container>
+
+		<canvas height="100" id="line" class="chart chart-line" chart-data="dataLineChart" chart-legend="true"
+			chart-labels="labelsLineChart" chart-series="series" chart-colours="colours">
+		</canvas>
   </md-content>
 </section>
