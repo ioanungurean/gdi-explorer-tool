@@ -63,3 +63,7 @@ h3.md-title {
 md-block {
   margin-bottom: 100px !important;
 }
+
+.section {
+  padding: 0 5% 3% 5%;
+}
