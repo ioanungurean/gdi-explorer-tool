@@ -68,10 +68,10 @@ md-block {
   padding: 0 5% 3% 5%;
 }
 
-<<<<<<< HEAD
 .home {
   padding: 6% 5% 3% 5%;
-=======
+}
+
 .tabsdemoDynamicHeight md-content {
   background-color: transparent !important; }
   .tabsdemoDynamicHeight md-content md-tabs {
@@ -80,6 +80,5 @@ md-block {
     .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
       background: white; }
   .tabsdemoDynamicHeight md-content h1:first-child {
-    margin-top: 0; 
->>>>>>> fa807a2adbeeebf67c21d42dfa0e044b99b88a12
+    margin-top: 0;
 }
