@@ -83,14 +83,23 @@ function ChartsCtrl($scope, countryService) {
   ];
 
   $scope.getSelectedLineCountry = function() {
-  if ($scope.selectedLineCountry !== undefined) {
-  $scope.dataLineChart = [
-    [$scope.selectedLineCountry.gdi_value, $scope.selectedLineCountry.hdi_m/0.945, $scope.selectedLineCountry.le_m/81.2, $scope.selectedLineCountry.eys_m/19.7, $scope.selectedLineCountry.mys_m/13.8, $scope.selectedLineCountry.gni_m/143979],
-    [$scope.selectedLineCountry.gdi_value, $scope.selectedLineCountry.hdi_f/0.94, $scope.selectedLineCountry.le_f/86.8, $scope.selectedLineCountry.eys_f/20.7, $scope.selectedLineCountry.mys_f/13.1, $scope.selectedLineCountry.gni_f/59994],
-  ];
-    return $scope.selectedLineCountry.name;
-  } else {
-    return "Please select an country";
-  }
-};
+    if ($scope.selectedLineCountry !== undefined) {
+    $scope.dataLineChart = [
+      [$scope.selectedLineCountry.gdi_value, $scope.selectedLineCountry.hdi_m/0.945, $scope.selectedLineCountry.le_m/81.2, $scope.selectedLineCountry.eys_m/19.7, $scope.selectedLineCountry.mys_m/13.8, $scope.selectedLineCountry.gni_m/143979],
+      [$scope.selectedLineCountry.gdi_value, $scope.selectedLineCountry.hdi_f/0.94, $scope.selectedLineCountry.le_f/86.8, $scope.selectedLineCountry.eys_f/20.7, $scope.selectedLineCountry.mys_f/13.1, $scope.selectedLineCountry.gni_f/59994],
+    ];
+      return $scope.selectedLineCountry.name;
+    } else {
+      return "Please select an country";
+    }
+  };
+
+  $scope.exportImage = function() {
+    var canvas = document.getElementById("line");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    }
+    window.location.href = image;
+  };
 }
