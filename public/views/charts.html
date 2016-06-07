@@ -2,12 +2,19 @@
 
 	<md-content class="cards_chart md-whiteframe-1dp" layout="column" flex>
 
-		<md-input-container class="md-block drop_down_countries" flex-gt-sm>
+		<!--<md-input-container class="md-block drop_down_countries" flex-gt-sm>
 			<label class="drop_down_countries">Select Country</label>
 			<md-select ng-model="user.country">
-				<md-option ng-repeat="country in countries" value="{{country.name}}">
+				<md-option ng-repeat="country in countries" value="{{country}}">
 					{{country.name}}
 				</md-option>
+			</md-select>
+		</md-input-container>-->
+
+		<md-input-container>
+			<label>Select Country</label>
+			<md-select ng-model="selectedCountry" md-selected-text="getSelectedCountry()">
+				<md-option ng-value="country" ng-repeat="country in countries">{{country.name}}</md-option>
 			</md-select>
 		</md-input-container>
 
